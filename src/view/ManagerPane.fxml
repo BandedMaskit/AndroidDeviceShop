@@ -4,8 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagerPaneController">
    <children>
       <Label alignment="CENTER" layoutX="213.0" layoutY="14.0" prefHeight="33.0" prefWidth="184.0" text="Welcome, shop manager!" />
       <Label alignment="CENTER" layoutX="232.0" layoutY="61.0" prefHeight="17.0" prefWidth="146.0" text="Choose a task." />

@@ -7,31 +7,30 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MngDevicesPaneController">
    <children>
       <HBox prefHeight="533.0" prefWidth="700.0">
          <children>
-            <TableView prefHeight="477.0" prefWidth="682.0">
+            <TableView fx:id="DeviceTable" prefHeight="477.0" prefWidth="682.0">
               <columns>
-                <TableColumn prefWidth="85.0" text="DeviceID" />
-                <TableColumn prefWidth="85.0" text="ProductName" />
-                  <TableColumn prefWidth="85.0" text="ProductType" />
-                  <TableColumn prefWidth="85.0" text="Disc Capacity" />
-                  <TableColumn prefWidth="85.0" text="OS" />
-                  <TableColumn prefWidth="85.0" text="Processor" />
-                  <TableColumn prefWidth="85.0" text="RAM" />
-                  <TableColumn prefWidth="85.0" text="Price" />
+                <TableColumn fx:id="IDColumn" prefWidth="85.0" text="DeviceID" />
+                <TableColumn fx:id="nameColumn" prefWidth="85.0" text="ProductName" />
+                  <TableColumn fx:id="typeColumn" prefWidth="85.0" text="ProductType" />
+                  <TableColumn fx:id="capacityColumn" prefWidth="85.0" text="Disc Capacity" />
+                  <TableColumn fx:id="systemColumn" prefWidth="85.0" text="OS" />
+                  <TableColumn fx:id="processorColumn" prefWidth="85.0" text="Processor" />
+                  <TableColumn fx:id="RAMColumn" prefWidth="85.0" text="RAM" />
+                  <TableColumn fx:id="priceColumn" prefWidth="85.0" text="Price" />
               </columns>
             </TableView>
-            <ScrollBar orientation="VERTICAL" />
+            <ScrollBar fx:id="deviceScrollBar" orientation="VERTICAL" />
          </children>
       </HBox>
       <HBox prefHeight="82.0" prefWidth="700.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Add" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Delete" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Back" />
+            <Button fx:id="addButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Add" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Delete" />
+            <Button fx:id="backButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Back" />
          </children>
       </HBox>
    </children>

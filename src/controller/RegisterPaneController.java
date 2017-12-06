@@ -57,12 +57,10 @@ public class RegisterPaneController implements Initializable{
 				public void handle(ActionEvent event)  {
 					 PreparedStatement ps;
 		    	        try {
-		    	        	String useDataBaseQuery = "USE androidshop";
 		    	            Connection con = DbUtil.getInstance().getConnection();
 		    	            String registerQuery = "INSERT INTO `userdatabase`(status, username, password, firstname, lastname, shippingadress, prefferedpayment) "
 		    	            		+ "VALUE ('user','"+userField.getText()+"','"+passwordField.getText()+"','"+firstNameField.getText()+"','"+lastNameField.getText()+"','"+adressField.getText()+"','"+paymentMethodBox.getValue()+"')";
 		    	            ps = con.prepareStatement(registerQuery); 
-		    	            ps.executeUpdate(useDataBaseQuery);
 		    	            ps.executeUpdate(registerQuery);
 		    	        }
 		    	        catch (Exception e) {
@@ -87,7 +85,6 @@ public class RegisterPaneController implements Initializable{
 		            stage.show();
 		            ((Node)(event.getSource())).getScene().getWindow().hide();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
     		}

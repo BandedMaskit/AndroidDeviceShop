@@ -4,11 +4,11 @@ public class User {
 	public int userid;
 	public String username;
 	public String password;
-	public Status status;
+	public String status;
 	public String firstname;
 	public String lastname;
 	public String shippingadress;
-	public PrefferedPayment prefferedpayment;
+	public String prefferedpayment;
 	public String purchaseditems;
 	
 	public enum PrefferedPayment {
@@ -19,7 +19,7 @@ public class User {
 		admin, user
 	}
    
-	public User(int id, String username, String password, Status status, String firstname, String lastname, String shippingadress, PrefferedPayment prefferedpayment, String purchaseditems) {
+	public User(int id, String username, String password, String status, String firstname, String lastname, String shippingadress, String prefferedpayment, String purchaseditems) {
 		this.userid = id;
 		this.username = username;
 		this.status = status;
@@ -60,11 +60,11 @@ public class User {
 		this.password = password;
 	}
 
-	public Status getStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
@@ -92,11 +92,11 @@ public class User {
 		this.shippingadress = shippingadress;
 	}
 
-	public PrefferedPayment getPrefferedpayment() {
+	public String getPrefferedpayment() {
 		return prefferedpayment;
 	}
 
-	public void setPrefferedpayment(PrefferedPayment prefferedpayment) {
+	public void setPrefferedpayment(String prefferedpayment) {
 		this.prefferedpayment = prefferedpayment;
 	}
 

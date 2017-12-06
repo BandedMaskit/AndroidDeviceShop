@@ -3,16 +3,13 @@ package data;
 public class Device {
 	public int deviceid;
 	public String productname;
-	public ProductType producttype;
+	public String producttype;
 	public int memorycapacity;
 	public String os;
 	public String processor;
 	public int ram;
 	public double price;
 	
-	public enum ProductType {
-		Phone, Tablet
-	}
 
 	public int getDeviceid() {
 		return deviceid;
@@ -30,11 +27,11 @@ public class Device {
 		this.productname = productname;
 	}
 
-	public ProductType getProducttype() {
+	public String getProducttype() {
 		return producttype;
 	}
 
-	public void setProducttype(ProductType producttype) {
+	public void setProducttype(String producttype) {
 		this.producttype = producttype;
 	}
 
@@ -79,7 +76,7 @@ public class Device {
 		this.price = price;
 	}
 	
-	public Device(int deviceid, String productname, ProductType producttype, int memorycapacity, String os, String processor, int ram, double price ){
+	public Device(int deviceid, String productname, String producttype, int memorycapacity, String os, String processor, int ram, double price ){
 		this.deviceid = deviceid;
 		this.productname = productname;
 		this.producttype = producttype;

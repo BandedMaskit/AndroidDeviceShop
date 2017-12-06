@@ -52,7 +52,7 @@ public class LoginPaneController implements Initializable {
     	        PreparedStatement ps;
     	        try {
     	            Connection connection = DbUtil.getInstance().getConnection();
-    	            String sql = "SELECT username, password, status FROM userid WHERE username = ? AND password = ?";
+    	            String sql = "SELECT username, password, status FROM userdatabase WHERE username = ? AND password = ?";
     	            ps = connection.prepareStatement(sql);
     	            ps.setString(1, UserField.getText());
     	            ps.setString(2, String.valueOf(PassField.getText()));
@@ -84,7 +84,8 @@ public class LoginPaneController implements Initializable {
     	                        stage.show();
     	                        ((Node)(event.getSource())).getScene().getWindow().hide();
     	                    } catch (Exception e) {
-    	                        System.out.println("Failed to Show Stage "+ e);
+    	                        System.out.println("Failed to load panel");
+    	                        e.printStackTrace();
     	                    }
     	                }                    
     	            }                
